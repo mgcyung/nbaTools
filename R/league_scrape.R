@@ -385,6 +385,11 @@ GetGameLogs <- function(...) {
   return(GetData(endpoint, referer, ix, param.keys, source = 'NBA', ...))
 }
 
+factor2numeric <- function(fct) {
+    value <- levels(fct)[fct]
+    return(as.numeric(value))
+}
+
 #' RPM
 #'
 #' @return data frame with player RPMs
@@ -420,7 +425,7 @@ GetRPM <- function(year = kYear) {
   df <- df[, c(2, 3, 10, 4:9)]
 
   # Fix the column types
-  ## df[, -c(1:3)] <- lapply(df[, -c(1:3)], as.numeric)
+  df[, -c(1:3)] <- lapply(df[, -c(1:3)], factor2numeric)
 
   return(df)
 }
