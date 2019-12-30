@@ -395,7 +395,7 @@ GetGameLogs <- function(...) {
 
 GetRPM <- function(year = kYear) {
 
-  base.url <- paste0('http://espn.go.com/nba/statistics/rpm/_/year/', year, '/page/PPPP/sort/RPM')
+  base.url <- paste0('http://www.espn.com/nba/statistics/rpm/_/year/', year, '/page/PPPP/sort/RPM')
 
   continue <- TRUE
   i <- 1
