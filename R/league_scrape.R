@@ -420,7 +420,7 @@ GetRPM <- function(year = kYear) {
   df <- df[, c(2, 3, 10, 4:9)]
 
   # Fix the column types
-  df[, -c(1:3)] <- lapply(df[, -c(1:3)], as.numeric)
+  ## df[, -c(1:3)] <- lapply(df[, -c(1:3)], as.numeric)
 
   return(df)
 }
